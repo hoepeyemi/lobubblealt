@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/webhook/(.*)",
+      "dest": "/api/webhook/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "env": {
+    "TELEGRAM_BOT_TOKEN": "@telegram_bot_token",
+    "WEBHOOK_SECRET_PATH": "@webhook_secret_path",
+    "ADMIN_TOKEN": "@admin_token"
+  }
+} 
