@@ -57,12 +57,12 @@ The bot uses `node-telegram-bot-api` to interact with the Telegram Bot API. Key 
 - **Reply Markup**: Implements both inline keyboards and custom reply keyboards
 - **Conversation Management**: Tracks user state through multi-step processes
 
-### Solana Integration details
+### Solana Integration
 
 The Solana functionality is implemented using `@solana/web3.js` in `src/utils/solana.ts`:
 
 ```typescript
-// Key method for wallet generation  
+// Key method for wallet generation
 export async function generateVanityWallet(
   prefix: string,
   progressCallback?: (attempts: number) => Promise<void>
